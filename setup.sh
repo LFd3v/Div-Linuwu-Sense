@@ -49,6 +49,10 @@ is_command_available() {
 # Function to check if module is already installed
 is_module_installed() {
   local module_name="$1"
+  if [ -z "$module_name" ]; then
+    echo -e "${YELLOW}Module name cannot be empty.${NC}"
+    return 1
+  fi
   modinfo "${module_name}" &> /dev/null && return 0 || return 1
 }
 
