@@ -255,7 +255,7 @@ install_drivers() {
   echo "${MODULE_LOAD}" > "${MODULE_LOAD_FILE}"
 
   echo ""
-  echo -e "${YELLOW}*****    ATTENTION    *****${NC}"
+  echo -e "${YELLOW}*****               ATTENTION               *****${NC}"
   echo -e "${YELLOW}If other kernels are installed, you may need to${NC}"
   echo -e "${YELLOW}install the driver for them manually (or wait for${NC}"
   echo -e "${YELLOW}the next kernel update):${NC}"
