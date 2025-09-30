@@ -1,7 +1,7 @@
 #!/bin/env bash
 
-# Div Linuwu Sense Installer Script
-# This script installs, uninstalls, or updates the Div Linuwu Sense driver for Acer laptops on Linux
+# Linuwu Sense Installer Script
+# This script installs, uninstalls, or updates the Linuwu Sense driver for Acer laptops on Linux
 # Components: Linuwu-Sense (drivers)
 
 # Stop on error
@@ -117,7 +117,7 @@ check_root() {
 print_banner() {
   clear
   echo -e "${BLUE}==========================================${NC}"
-  echo -e "${BLUE}    Div Linuwu Sense Installer v${SCRIPT_VERSION}     ${NC}"
+  echo -e "${BLUE}      Linuwu Sense Installer v${SCRIPT_VERSION}       ${NC}"
   echo -e "${BLUE}     Acer Laptop WMI Drivers v${MODULE_VERSION}      ${NC}"
   echo -e "${BLUE}==========================================${NC}"
   echo -e "${YELLOW}System:         ${SYSTEM}${NC}"
