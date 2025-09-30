@@ -1,6 +1,6 @@
-# Div Linuwu Sense DKMS Installation Guide
+# Linuwu Sense DKMS Installation Guide
 
-This guide explains how to install or uninstall the Div Linuwu Sense DKMS module. The DKMS module makes sure the driver is updated when newer kernels are installed.
+This guide explains how to install or uninstall the Linuwu Sense DKMS module. The DKMS module makes sure the driver is updated when newer kernels are installed.
 
 ## Prerequisites
 
@@ -47,13 +47,13 @@ If you prefer to install manually, follow these steps while in the directtory th
    ```
    In the output, note the version in the end, for instance if the output is:
    ```bash
-   Creating symlink /var/lib/dkms/linuwu-sense/25.701/source -> /usr/src/linuwu-sense-25.701
+   Creating symlink /var/lib/dkms/linuwu-sense/0.1.0/source -> /usr/src/linuwu-sense-0.1.0
    ```
-   then version is `25.701`.
+   then version is `0.1.0`.
 
 2. **Install the module:**
    ```bash
-   sudo dkms install -m linuwu-sense -v 25.701
+   sudo dkms install -m linuwu-sense -v 0.1.0
    ```
 
 3. **Unload the stock driver and load the new one:**
@@ -110,7 +110,7 @@ To uninstall the drivers:
 2. **Manual uninstallation:**
    ```bash
    # Remove the module from DKMS
-   sudo dkms remove -m linuwu_sense -v 25.701 --all
+   sudo dkms remove -m linuwu_sense -v 0.1.0 --all
    
    # Stop and disable the service
    sudo systemctl stop linuwu_sense.service
@@ -120,7 +120,7 @@ To uninstall the drivers:
    sudo rm -f /etc/modprobe.d/blacklist-acer_wmi.conf
    sudo rm -f /etc/modules-load.d/linuwu_sense.conf
    sudo rm -f /etc/systemd/system/linuwu_sense.service
-   sudo rm -rf /usr/src/linuwu_sense-25.701
+   sudo rm -rf /usr/src/linuwu_sense-0.1.0
 
    # Apply changes to systemd
    sudo systemctl daemon-reload
@@ -143,7 +143,7 @@ If you encounter issues:
 
 If there are other kernels installed, you may need to install the driver for those kernels manually:
 ```bash
-sudo dkms install linuwu_sense/25.701 -k <kernel_version>
+sudo dkms install linuwu_sense/0.1.0 -k <kernel_version>
 ```
 Or wait for a new system update to the kernels, it should trigger the installation of all DKMS modules automatically.
 
