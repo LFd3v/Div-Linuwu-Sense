@@ -110,7 +110,7 @@ To uninstall the drivers:
 2. **Manual uninstallation:**
    ```bash
    # Remove the module from DKMS
-   sudo dkms remove -m linuwu_sense -v 25.701 --all
+   sudo dkms remove -m linuwu-sense -v 25.701 --all
    
    # Stop and disable the service
    sudo systemctl stop linuwu_sense.service
@@ -143,7 +143,7 @@ If you encounter issues:
 
 If there are other kernels installed, you may need to install the driver for those kernels manually:
 ```bash
-sudo dkms install linuwu_sense/25.701 -k <kernel_version>
+sudo dkms install linuw-sense/25.701 -k <kernel_version>
 ```
 Or wait for a new system update to the kernels, it should trigger the installation of all DKMS modules automatically.
 
